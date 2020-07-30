@@ -1,0 +1,1 @@
+export default URL = "./sample-data.json?vendor=idera&id=1009";
