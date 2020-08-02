@@ -15,3 +15,7 @@ export { URL_SERVER, URL_LOCAL, VENDOR_DETAILS };
 
 ##Use of config file
 import { URL_LOCAL, URL_SERVER, VENDOR_DETAILS } from './env.js'
+
+
+##Minification tool
+https://javascript-minifier.com/
