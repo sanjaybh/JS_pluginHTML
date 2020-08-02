@@ -13,18 +13,17 @@
 </head>
 <body>
 	
-	<div class="cls-container">
-		<div id="app-embed-ed-qus">Loading...</div>
+	<div class="cls-container cls-add-widget-cust">
+		<div id="app-embed-ed-qus" style="width: 300px;">Loading...</div>
 		<script src="https://cdn.fusioncharts.com/fusioncharts/add-widget/contentWidget.js" defer></script>
 
 		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', () => { 
+			document.addEventListener('DOMContentLoaded', () => {
+				const elNode = document.querySelector('.cls-add-widget-cust').firstElementChild;
 				var pObj = new TriggerEvent(); 
 				pObj.init({
-					vendorName: "Idera", 
-					vendorId: 1009, 
-					domain: window.location.hostname,
-					el:"app-embed-ed-qus"
+					vendorName: "Idera", vendorId: 1009,
+					domain: window.location.hostname, el: elNode.id
 				})
 			});
 		</script>

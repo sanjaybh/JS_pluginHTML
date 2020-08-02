@@ -74,12 +74,16 @@ class TriggerEvent {
 		})(elementId)		
 	}
 
-	init(Obj) {
+	init(Obj, dimension = {}) {
 		var VENDOR_DETAILS = {
 			vendorName : Obj.vendorName,
 			vendorId : Obj.vendorId,
 			domain : Obj.domain,
 			elementId : Obj.el
+		}
+		//debugger;
+		if(dimension){
+			//mainDimension
 		}
 		this.getData(VENDOR_DETAILS);
 	}	
