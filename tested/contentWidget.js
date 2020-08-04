@@ -1,3 +1,11 @@
+/**!
+* @license JavaScript Library
+* @by Sanjay Bhan
+* @ 2 Aug, 2020 at 5:20 PM
+* @version 1.1.1
+* https://obfuscator.io/
+*/
+
 class TriggerEvent {
 	constructor(){
 		this.verndorName =  "DEFAULT"; 
