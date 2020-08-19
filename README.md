@@ -17,5 +17,8 @@ export { URL_SERVER, URL_LOCAL, VENDOR_DETAILS };
 import { URL_LOCAL, URL_SERVER, VENDOR_DETAILS } from './env.js'
 
 
+##Obfuscator tool
+https://obfuscator.io/
+
 ##Minification tool
 https://javascript-minifier.com/
