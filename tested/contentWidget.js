@@ -6,8 +6,10 @@
 * https://obfuscator.io/
 */
 
+//import {cube, foo, CONST} from './env.js';
+
 class TriggerEvent {
-	constructor(){
+	_constructor(){
 		this.verndorName =  "DEFAULT"; 
 		this.vendorId = "0";
 		this.domain = "";
@@ -82,7 +84,13 @@ class TriggerEvent {
 		})(elementId)		
 	}
 
-	init(Obj, dimension = {}) {
+	isEmpty(val){
+		return (val === undefined || val === null || val === 0 || val === "0" || val.length <= 0) ? true : false;
+	}
+
+	init(Obj = {
+		verndorName:"DEFAULT", vendorId:"0", domain:"",element:""
+	}, dimension = {}) {
 		var VENDOR_DETAILS = {
 			vendorName : Obj.vendorName,
 			vendorId : Obj.vendorId,
@@ -93,6 +101,33 @@ class TriggerEvent {
 		if(dimension){
 			//mainDimension
 		}
-		this.getData(VENDOR_DETAILS);
+		var _flag = false;
+		var _col = 'background: #234; color: #bada55';
+
+		if(this.isEmpty(VENDOR_DETAILS.vendorName)){
+			console.log('%c Vendor name is missing.', _col);
+			_flag = true;
+		}
+		if(this.isEmpty(VENDOR_DETAILS.vendorId)){
+			console.log('%c Vendor id is missing.', _col);
+			_flag = true;
+		}	
+
+		if(this.isEmpty(VENDOR_DETAILS.domain)){
+			console.log('%c Domain is missing.', _col);
+			_flag = true;
+		}
+
+		if(this.isEmpty(VENDOR_DETAILS.elementId)){
+			console.log('%c ElementId is missing.', _col);
+			_flag = true;
+		}
+
+		if(_flag == true){
+			(document.getElementById("app-embed-ed-qus") !== null ) ? document.getElementById("app-embed-ed-qus").innerHTML = "Data object missing, kindly check console." : '';
+			return true;
+		}else{
+			this.getData(VENDOR_DETAILS);
+		}
 	}	
 }
